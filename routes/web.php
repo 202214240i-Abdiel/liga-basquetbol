@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\JugadorController;
+use App\Http\Controllers\PartidoController;
+use App\Http\Controllers\EstadisticaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,6 +22,8 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('equipos', EquipoController::class);
     Route::resource('jugadores', JugadorController::class);
+    Route::resource('partidos', PartidoController::class);
+    Route::get('/estadisticas', [EstadisticaController::class, 'index'])->name('estadisticas.index');
 });
 
 require __DIR__.'/auth.php';
