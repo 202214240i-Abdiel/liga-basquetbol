@@ -5,6 +5,8 @@
 
     <div style="padding: 30px;">
         <a href="{{ route('equipos.create') }}">Crear equipo</a>
+        |
+        <a href="{{ route('jugadores.index') }}">Ver jugadores</a>
 
         @if(session('success'))
             <p style="color: green;">{{ session('success') }}</p>
@@ -31,7 +33,7 @@
                         <form action="{{ route('equipos.destroy', $equipo) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Eliminar</button>
+                            <button type="submit" onclick="return confirm('¿Eliminar equipo?')">Eliminar</button>
                         </form>
                     </td>
                 </tr>
