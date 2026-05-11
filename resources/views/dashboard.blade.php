@@ -5,13 +5,13 @@
 
     <div style="padding: 30px;">
         <h3>Sistema de Gestión de Liga de Básquetbol</h3>
-        <p>Seleccione un módulo para administrar la información de la liga.</p>
+        <p>Bienvenido. Selecciona un módulo para administrar la información de la liga.</p>
 
-        <ul>
-            <li><a href="{{ route('equipos.index') }}">Gestión de equipos</a></li>
-            <li><a href="{{ route('jugadores.index') }}">Gestión de jugadores</a></li>
-            <li><a href="{{ route('partidos.index') }}">Registro de partidos</a></li>
-            <li><a href="{{ route('estadisticas.index') }}">Estadísticas básicas</a></li>
-        </ul>
+        <div class="module-links">
+            <a href="{{ route('equipos.index') }}">Gestión de equipos</a>
+            <a href="{{ route('jugadores.index') }}">Gestión de jugadores</a>
+            <a href="{{ route('partidos.index') }}">Registro de partidos</a>
+            <a href="{{ route('estadisticas.index') }}">Estadísticas básicas</a>
+        </div>
     </div>
 </x-app-layout>
